@@ -1,29 +1,27 @@
-#include <stdio.h>
-
+#include<stdio.h>
 /**
  * main - Entry point
- * Return: ALways 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n, m;
-
-	for (n = 28; n <= 46; n++)
-	{
-		for (m = 29; m <= 47; m++)
-		{
-			if (m > n)
-			{
-				putchar(n);
-				putchar(m);
-				if (n != 46 || m != 47)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+        int a, b;
+        for (a = 48; a <= 56; a++)
+        {
+                for (b = 49; b <= 57; b++)
+                {
+                        if (b > a)
+                        {
+                                putchar(a);
+                                putchar(b);
+                                if (a != 56 || b != 57)
+                                {
+                                        putchar(',');
+                                        putchar(' ');
+                                }
+                        }
+                }
+        }
+        putchar('\n');
+        return (0);
 }
