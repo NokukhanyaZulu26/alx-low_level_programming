@@ -5,16 +5,17 @@
  */
 int main(void)
 {
-        int a, b;
-        for (a = 48; a <= 56; a++)
+        int c, d;
+
+        for (c = 48; c <= 56; c++)
         {
-                for (b = 49; b <= 57; b++)
+                for (d = 49; d <= 57; d++)
                 {
-                        if (b > a)
+                        if (d > c)
                         {
-                                putchar(a);
-                                putchar(b);
-                                if (a != 56 || b != 57)
+                                putchar(c);
+                                putchar(d);
+                                if (c != 56 || d != 57)
                                 {
                                         putchar(',');
                                         putchar(' ');
