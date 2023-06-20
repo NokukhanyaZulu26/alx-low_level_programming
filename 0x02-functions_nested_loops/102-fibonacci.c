@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -11,15 +12,15 @@ int main(void)
 	for (count = 0; count < 50; count++)
 	{
 		sum = fib1 + fib2;
-		_patchar("%lu", sum);
+		printf("%lu", sum);
 
 		fib1 = fib2;
 		fib2 = sum;
 
 		if (count == 49)
-		_patchar("\n");
+			printf("\n");
 		else
-			_patchar(", ");
+			printf(", ");
 	}
 
 	return (0);
