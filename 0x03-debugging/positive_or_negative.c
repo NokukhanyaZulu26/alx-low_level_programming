@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - Entry point
+ * positive_or_negative - Entry point
  * 0: number to be checked
  * @i: to be checked
  * Return: Always 0 (Success)
