@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * more_number - Entry point
+ * more_numbers - Entry point
  * Return: 0 (Success)
  */
 
