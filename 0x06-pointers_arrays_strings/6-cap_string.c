@@ -2,37 +2,38 @@
 
 /**
  * cap_string - Entry point
- * @m: pointer to string
+ * @str: pointer to string
  *
- * Return: pointer to m
+ * Return: pointer to be changed
  */
-char *cap_string(char *m)
+char *cap_string(char *str)
 {
 	int index = 0;
 
-	while (m[index])
+	while (str[index])
 	{
-		while (!(m[0] >= 97 && m[0] <= 122))
+		while (!(str[index] >= 97 && str[index] <= 122))
 			index++;
 		
-		if (m[index - 1] == ' ' ||
-				m[index - 1] == '\t' ||
-				m[index - 1] == '\n' ||
-				m[index - 1] == ',' ||
-				m[index - 1] == ';' ||
-				m[index - 1] == '.' ||
-				m[index - 1] == '!' ||
-				m[index - 1] == '?' ||
-				m[index - 1] == '"' ||
-				m[index - 1] == '(' ||
-				m[index - 1] == ')' ||
-				m[index - 1] == '{' ||
-				m[index - 1] == '}' ||
+		if (str[index - 1] == ' ' ||
+				str[index - 1] == '\t' ||
+				str[index - 1] == '\n' ||
+				str[index - 1] == ',' ||
+				str[index - 1] == ';' ||
+				str[index - 1] == '.' ||
+				str[index - 1] == '!' ||
+				str[index - 1] == '?' ||
+				str[index - 1] == '"' ||
+				str[index - 1] == '(' ||
+				str[index - 1] == ')' ||
+				str[index - 1] == '{' ||
+				str[index - 1] == '}' ||
 				index == 0)
-			m[index] -= 32;
+			str[index] -= 32;
 		
 		index++;
 	}
 	
-	return (m);
+	return (str);
 }
+
