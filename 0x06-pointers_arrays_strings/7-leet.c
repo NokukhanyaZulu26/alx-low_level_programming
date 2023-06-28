@@ -13,16 +13,16 @@
 char *leet(char *m)
 {
 	int p, q;
-	char letters[] = "aAeEoOtTlL";
-	char numbers[] = "4433007711";
+	char leetletters[] = "aAeEoOtTlL";
+	char leetnumbers[] = "4433007711";
 
 	for (p = 0; m[p] != '\0'; p++)
 	{
-		for (q = 0; p < 10; q++)
+		for (q = 0; q < 10; q++)
 		{
-			if (m[p] == letters[q])
+			if (m[p] == leetletters[q])
 			{
-				m[p] = numbers[q];
+				m[p] = leetnumbers[q];
 			}
 		}
 	}
