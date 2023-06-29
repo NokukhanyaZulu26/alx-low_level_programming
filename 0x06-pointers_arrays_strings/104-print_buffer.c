@@ -9,15 +9,15 @@
  */
 void print_buffer(char *b, int size)
 {
-	int start_line, end_line;
+	int s, e;
 
 	if (size > 0)
 	{
-		for (start_line = 0; start_line < size; start_line += 10)
+		for (s = 0; s < size; s += 10)
 		{
-			end_line = (size - start_line < 10) ? size - start_line : 10;
-			printf("%08x: ", start_line);
-			printf(b, start_line, end_line);
+			e = (size - s < 10) ? size - s : 10;
+			printf("%08x: ", s);
+			printf(b, s, e);
 			printf("\n");
 		}
 	} else
