@@ -1,20 +1,31 @@
 #include "main.h"
 
 /**
- * _strchr - Entry point
+ * _strspn - Entry point
  * @s: string to be searched
- * @c: character to be located
+ * @accept: input
  *
- * Return: Always a (Success)
+ * Return: Always 0
  */
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
-	int a = 0;
+	unsigned int n = 0;
+	int h;
 
-	for (; s[a] >= '\0'; a++)
+	while (*s)
 	{
-		if (s[a] == c)
-			return (&s[a]);
+		for (h = 0; accept[h]; h++)
+		{
+			if (*s == accept[h])
+			{
+				n++;
+				break;
+			}
+			else if (accept[h + 1] == '\0')
+				return (n);
+		}
+		s++;
 	}
-	return (0);
+	return (n);
 }
+
