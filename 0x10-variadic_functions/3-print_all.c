@@ -42,7 +42,7 @@ void print_all(const char * const format, ...)
 					k++;
 			}
 		}
-		printf("\n");
-		va_end(list);
 	}
+	printf("\n");
+	va_end(list);
 }
